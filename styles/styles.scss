@@ -6,15 +6,15 @@
 }
 
 :root {
-  // --color-primary: #292d3e;
+  --color-primary: #292d3e;
   // --color-purple: #c792ea;
-  // --color-light-blue: #89ddff;
-  // --color-red: #f07178;
-  // --color-pale-purple: #a6accd;
-  // --color-green: #c3e88d;
+  //--color-secondary: #89ddff;
+  --color-secondary: #f0aa71;
+  --color-third: #a6accd;
+  //--color-green: #c3e88d;
 
-  --color-primary: #191d2b;
-  --color-secondary: #27ae60;
+  //--color-primary: #191d2b;
+  //--color-secondary: #27ae60;
   --color-grey-0: #f8f8f8;
   --color-grey-1: #dbe1e8;
   --color-grey-2: #b2becd;
@@ -31,7 +31,7 @@ body {
   background-color: var(--color-primary);
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
-  color: white;
+  color: var(--color-third);
   transition: var(--transition);
 }
 
@@ -129,7 +129,7 @@ section {
     box-shadow: var(--box-shadow-1);
     i {
       font-size: 1.2rem;
-      color: var(--color-grey-2);
+      color: var(--color-third);
       pointer-events: none;
     }
   }
@@ -174,6 +174,68 @@ section {
       }
     }
   }
+
+  .right-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 18rem;
+    .name {
+      font-size: 3rem;
+      span {
+        color: var(--color-secondary);
+      }
+    }
+    p {
+      margin: 1.5rem;
+      line-height: 2 rem;
+      color: var(--color-third);
+    }
+  }
 }
 
 // Independent components
+.btn-con {
+  display: flex;
+  align-self: flex-start;
+}
+.main-btn {
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--color-secondary);
+  display: flex;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  .btn-text {
+    padding: 0 2rem;
+  }
+  .btn-icon {
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-100%);
+    transition: var(--transition);
+    z-index: -1;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-secondary);
+      transform: translateX(0);
+    }
+  }
+}
