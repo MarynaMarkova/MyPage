@@ -141,6 +141,10 @@ section {
   pointer-events: none;
 }
 
+h4.stat-title {
+  color: white;
+}
+
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -261,11 +265,12 @@ img {
 .about-container .left-about p {
   line-height: 2rem;
   padding: 1rem;
-  color: var(--color-grey-1);
+  color: var(--color-third);
 }
 .about-container .left-about h4 {
   font-size: 2rem;
   text-transform: uppercase;
+  color: white;
 }
 
 .about-stats {
@@ -283,6 +288,7 @@ img {
 .about-stats .progress-bars .progress-bar .prog-title {
   text-transform: uppercase;
   font-weight: 500;
+  color: white;
 }
 .about-stats .progress-bars .progress-bar .progress-con {
   display: flex;
@@ -315,6 +321,45 @@ img {
 .about-stats .progress-bars .progress-bar .progress-con .progress .js {
   width: 45%;
 }
+.about-stats .progress-bars .progress-bar .progress-con .progress .bootstrap {
+  width: 50%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .api {
+  width: 30%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .git {
+  width: 80%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .github {
+  width: 80%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .hosting {
+  width: 40%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .algorithms {
+  width: 30%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .linux {
+  width: 80%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .seo {
+  width: 40%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .scratch {
+  width: 30%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .en {
+  width: 90%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .ua {
+  width: 100%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .ru {
+  width: 100%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .pl {
+  width: 20%;
+}
 
 .stat-title {
   text-transform: uppercase;
@@ -322,6 +367,7 @@ img {
   text-align: center;
   padding: 3.5rem 0;
   position: relative;
+  color: var(--grey-2);
 }
 .stat-title::before {
   content: "";
@@ -333,6 +379,58 @@ img {
   transform: translateX(-50%);
 }
 
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  padding-bottom: 3rem;
+}
+.timeline .timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 1px solid var(--color-grey-3);
+}
+.timeline .timeline-item .tl-icon {
+  position: absolute;
+  left: -26px;
+  top: 0;
+  background-color: var(--color-secondary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timeline .timeline-item .tl-icon i {
+  font-size: 1.3rem;
+  color: white;
+}
+.timeline .timeline-item .tl-duration {
+  padding: 0.2rem 0.6rem;
+  background-color: var(--color-grey-5);
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.timeline h5 {
+  padding: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+}
+.timeline h5 span {
+  color: var(--color-secondary);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.timeline p {
+  color: var(--color-third);
+}
+
 .btn-con {
   display: flex;
   align-self: flex-start;
@@ -340,7 +438,7 @@ img {
 
 .main-btn {
   border-radius: 30px;
-  color: inherit;
+  color: white;
   font-weight: 600;
   position: relative;
   border: 1px solid var(--color-secondary);

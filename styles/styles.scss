@@ -138,6 +138,9 @@ section {
   }
 }
 
+h4.stat-title {
+  color: white;
+}
 // Header-content
 .header-content {
   display: grid;
@@ -259,11 +262,12 @@ img {
     p {
       line-height: 2rem;
       padding: 1rem;
-      color: var(--color-grey-1);
+      color: var(--color-third);
     }
     h4 {
       font-size: 2rem;
       text-transform: uppercase;
+      color: white;
     }
   }
 }
@@ -280,6 +284,7 @@ img {
       .prog-title {
         text-transform: uppercase;
         font-weight: 500;
+        color: white;
       }
       .progress-con {
         display: flex;
@@ -310,6 +315,45 @@ img {
           .js {
             width: 45%;
           }
+          .bootstrap {
+            width: 50%;
+          }
+          .api {
+            width: 30%;
+          }
+          .git {
+            width: 80%;
+          }
+          .github {
+            width: 80%;
+          }
+          .hosting {
+            width: 40%;
+          }
+          .algorithms {
+            width: 30%;
+          }
+          .linux {
+            width: 80%;
+          }
+          .seo {
+            width: 40%;
+          }
+          .scratch {
+            width: 30%;
+          }
+          .en {
+            width: 90%;
+          }
+          .ua {
+            width: 100%;
+          }
+          .ru {
+            width: 100%;
+          }
+          .pl {
+            width: 20%;
+          }
         }
       }
     }
@@ -322,6 +366,8 @@ img {
   text-align: center;
   padding: 3.5rem 0;
   position: relative;
+  color: var(--grey-2);
+
   &::before {
     content: "";
     left: 50%;
@@ -332,14 +378,69 @@ img {
     transform: translateX(-50%);
   }
 }
+
+// TIMELINE
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  padding-bottom: 3rem;
+  .timeline-item {
+    position: relative;
+    padding-left: 3rem;
+    border-left: 1px solid var(--color-grey-3);
+    .tl-icon {
+      position: absolute;
+      left: -26px;
+      top: 0;
+      background-color: var(--color-secondary);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        font-size: 1.3rem;
+        color: white;
+      }
+    }
+    .tl-duration {
+      padding: 0.2rem 0.6rem;
+      background-color: var(--color-grey-5);
+      border-radius: 15px;
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+  h5 {
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    span {
+      color: var(--color-secondary);
+      font-weight: 500;
+      font-size: 1.2rem;
+    }
+  }
+  p {
+    color: var(--color-third);
+  }
+}
 // Independent components
+
 .btn-con {
   display: flex;
   align-self: flex-start;
 }
 .main-btn {
   border-radius: 30px;
-  color: inherit;
+  color: white;
   font-weight: 600;
   position: relative;
   border: 1px solid var(--color-secondary);
