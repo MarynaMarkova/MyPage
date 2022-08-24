@@ -571,23 +571,25 @@ h4.stat-title {
   .left-contact {
     flex: 2;
     .contact-info {
-      .contact-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        // Don't know why he has span and p on one line
-        p {
-          margin: 0.3rem 0 !important;
-          padding: 0 !important;
-          color: var(--color-grey-1);
-        }
-        .icon {
-          display: grid;
-          grid-template-columns: 40px 1fr;
-          i {
-            display: flex;
-            align-items: center;
-            font-size: 1.3rem;
+      .contact-block {
+        margin: 2.8rem auto;
+        .contact-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          p {
+            margin: 0.3rem 0 !important;
+            padding: 0 !important;
+            color: var(--color-grey-1);
+          }
+          .icon {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            i {
+              display: flex;
+              align-items: center;
+              font-size: 1.3rem;
+            }
           }
         }
       }
@@ -595,11 +597,12 @@ h4.stat-title {
     .contact-icon {
       display: flex;
       margin-top: 2rem;
+      justify-content: center;
       a {
         display: flex;
         align-items: center;
         color: white;
-        background-color: var(--color-grey-5);
+        background-color: var(--color-grey-3);
         cursor: pointer;
         justify-content: center;
         width: 50px;
@@ -613,12 +616,10 @@ h4.stat-title {
             color: var(--color-primary);
           }
         }
-
-        // Don't know, why the icons are not in one line
         i {
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: left;
           font-size: 1.3rem;
         }
       }
@@ -626,7 +627,7 @@ h4.stat-title {
   }
   .right-contact {
     flex: 3;
-    margin-left: 3rem;
+    margin-left: 7rem;
     .input-control {
       margin: 1.5rem 0;
       input,
