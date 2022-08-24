@@ -569,6 +569,15 @@ h4.stat-title {
 .contact-content-con .left-contact {
   flex: 2;
 }
+.contact-content-con .left-contact h4 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.contact-content-con .left-contact p {
+  margin: 1rem 0;
+  line-height: 2rem;
+}
 .contact-content-con .right-contact {
   flex: 3;
   margin-left: 3rem;
@@ -585,16 +594,30 @@ h4.stat-title {
   padding: 0.8rem 1.1rem;
   outline: none;
   border: none;
-  background-color: var(--color-grey-5);
+  background-color: var(--color-grey-3);
   width: 100%;
   color: white;
   resize: none;
+}
+.contact-content-con .right-contact .input-control input::-moz-placeholder, .contact-content-con .right-contact .input-control textarea::-moz-placeholder {
+  color: white;
+}
+.contact-content-con .right-contact .input-control input:-ms-input-placeholder, .contact-content-con .right-contact .input-control textarea:-ms-input-placeholder {
+  color: white;
+}
+.contact-content-con .right-contact .input-control input::placeholder,
+.contact-content-con .right-contact .input-control textarea::placeholder {
+  color: white;
 }
 .contact-content-con .right-contact .i-c-2 {
   display: flex;
 }
 .contact-content-con .right-contact .i-c-2 :last-child {
   margin-left: 1.5rem;
+}
+.contact-content-con .right-contact .submit-btn {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .btn-con {
