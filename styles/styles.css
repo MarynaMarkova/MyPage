@@ -9,6 +9,7 @@
   --color-primary: #292d3e;
   --color-secondary: #f0aa71;
   --color-third: #a6accd;
+  --color-white: white;
   --color-grey-0: #f8f8f8;
   --color-grey-1: #dbe1e8;
   --color-grey-2: #b2becd;
@@ -19,6 +20,20 @@
   --br-sm-2: 14px;
   --transition: all 0.4s ease-in-out;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.light-mode {
+  --color-primary: white;
+  --color-secondary: #da8d87;
+  --color-third: #a6accd;
+  --color-white: #454e56;
+  --color-grey-0: #f8f8f8;
+  --color-grey-1: #6c7983;
+  --color-grey-2: #6c7983;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #2a2e35;
+  --color-grey-6: #12181b;
 }
 
 body {
@@ -38,7 +53,7 @@ a {
 
 header {
   height: 100vh;
-  color: white;
+  color: var(--color-white);
   overflow: hidden;
 }
 
@@ -120,7 +135,7 @@ section {
   transition: var(--transition);
 }
 .controls .active-btn i {
-  color: white !important;
+  color: var(--color-white) !important;
 }
 .controls .control {
   padding: 1rem;
@@ -138,6 +153,30 @@ section {
 .controls .control i {
   font-size: 1.2rem;
   color: var(--color-third);
+  pointer-events: none;
+}
+
+.theme-btn {
+  top: 5%;
+  right: 3%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--color-grey-4);
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+}
+.theme-btn:active {
+  transform: translateY(-5px);
+}
+.theme-btn i {
+  font-size: 1.4rem;
+  color: var(--color-grey-2);
   pointer-events: none;
 }
 
@@ -168,7 +207,6 @@ section {
   height: 90%;
   width: 68%;
   margin-left: 4rem;
-  background-color: black;
   transition: var(--transition);
 }
 .header-content .left-header .image img {
@@ -266,7 +304,7 @@ img {
 .about-container .left-about h4 {
   font-size: 2rem;
   text-transform: uppercase;
-  color: white;
+  color: var(--color-white);
 }
 
 .about-stats {
@@ -285,7 +323,7 @@ img {
 .about-stats .progress-bars .progress-bar .prog-title {
   text-transform: uppercase;
   font-weight: 500;
-  color: white;
+  color: var(--color-white);
 }
 .about-stats .progress-bars .progress-bar .progress-con {
   display: flex;
@@ -402,7 +440,7 @@ img {
 }
 .timeline .timeline-item .tl-icon i {
   font-size: 1.3rem;
-  color: white;
+  color: var(--color-white);
 }
 .timeline .timeline-item .tl-duration {
   padding: 0.2rem 0.6rem;
@@ -418,7 +456,7 @@ img {
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 600;
-  color: white;
+  color: var(--color-white);
 }
 .timeline h5 span {
   color: var(--color-secondary);
@@ -469,7 +507,7 @@ img {
 }
 .portfolios .portfolio-item .hover-items h3 {
   font-size: 1.5rem;
-  color: white;
+  color: var(--color-white);
   padding-top: 6rem;
 }
 .portfolios .portfolio-item .hover-items .icon {
@@ -489,11 +527,11 @@ img {
 }
 .portfolios .portfolio-item .hover-items .icon i {
   font-size: 1.5rem;
-  color: white;
+  color: var(--color-white);
   margin: auto 1rem;
 }
 .portfolios .portfolio-item .hover-items .icon:hover {
-  background-color: white;
+  background-color: var(--color-white);
 }
 .portfolios .portfolio-item .hover-items .icon:hover i {
   color: var(--color-primary);
@@ -505,7 +543,7 @@ img {
 }
 
 h4.stat-title {
-  color: white;
+  color: var(--color-white);
 }
 
 .blogs {
@@ -599,7 +637,7 @@ h4.stat-title {
 .contact-content-con .left-contact .contact-icon a {
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--color-white);
   background-color: var(--color-grey-3);
   cursor: pointer;
   justify-content: center;
@@ -639,18 +677,18 @@ h4.stat-title {
   border: none;
   background-color: var(--color-grey-3);
   width: 100%;
-  color: white;
+  color: var(--color-white);
   resize: none;
 }
 .contact-content-con .right-contact .input-control input::-moz-placeholder, .contact-content-con .right-contact .input-control textarea::-moz-placeholder {
-  color: white;
+  color: var(--color-white);
 }
 .contact-content-con .right-contact .input-control input:-ms-input-placeholder, .contact-content-con .right-contact .input-control textarea:-ms-input-placeholder {
-  color: white;
+  color: var(--color-white);
 }
 .contact-content-con .right-contact .input-control input::placeholder,
 .contact-content-con .right-contact .input-control textarea::placeholder {
-  color: white;
+  color: var(--color-white);
 }
 .contact-content-con .right-contact .i-c-2 {
   display: flex;
@@ -670,7 +708,7 @@ h4.stat-title {
 
 .main-btn {
   border-radius: 30px;
-  color: white;
+  color: var(--color-white);
   font-weight: 600;
   position: relative;
   border: 1px solid var(--color-secondary);
@@ -709,7 +747,7 @@ h4.stat-title {
 
 .main-title {
   text-align: center;
-  color: white;
+  color: var(--color-white);
 }
 .main-title h2 {
   position: relative;
